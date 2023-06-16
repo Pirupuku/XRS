@@ -2,7 +2,7 @@
 Modified Version of XRS from Moonsorrow
 
 Added some buff icons for consumables. To see those you have to write the name of the buff:
-E.g.
+```
 Elixir of Fortitude = "Health II"
 Elixir of Superior Defense = "Greater Armor"
 Smoked Desert Dumplings = "Well Fed"
@@ -18,3 +18,4 @@ Major Troll's Blood Potion = "Regeneration"
 Tender Wolf Steak = "Food"
 Darkmoon Faire: 10% Damage = "Sayge's Dark Fortune of Damage"
 Darkmoon Faire: 10% Intelligence = "Sayge's Dark Fortune of Intelligence"
+```
