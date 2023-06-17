@@ -20,6 +20,7 @@ local allBuffs = {
 	["Flask of the Titans"] = "Inv_potion_62",
 	["Flask of Supreme Power"] = "Inv_potion_41",
 	["Flask of Distilled Wisdom"] = "Inv_potion_97",
+	-- Elixir of Fortitude
 	["Health II"] = "inv_potion_44",
 	["Greater Fire Protection Potion"] = "Inv_potion_24",
 	["Greater Frost Protection Potion"] = "Inv_potion_20",
@@ -28,6 +29,7 @@ local allBuffs = {
 	["Greater Arcane Protection Potion"] = "Inv_potion_83",
 	["Elixir of Giants"] = "Inv_potion_61",
 	["Winterfall Firewater"] = "Inv_potion_92",
+	-- Elixir of Superior Defense
 	["Greater Armor"] = "inv_potion_86",
 	["Spirit of Zanza"] = "Inv_potion_30",
 	["Rumsey Rum Black Label"] = "Inv_drink_04",
@@ -433,6 +435,36 @@ end
 
 
 function XRS.buff.prototype:SearchIcon(icon)
+	if icon == "Elixir of Fortitude" then
+		icon = "Health II"
+	elseif icon == "Elixir of Superior Defense" then
+		icon = "Greater Armor"
+	elseif icon == "Smoked Desert Dumplings" then
+		icon = "Well Fed"
+	elseif icon == "Mageblood Potion" then
+		icon = "Mana Regeneration"
+	elseif icon == "Grilled Squid" then
+		icon = "Increased Agility"
+	elseif icon == "R.O.I.D.S." then
+		icon = "Rage of Ages"
+	elseif icon == "Ground Scorpok Assay" then
+		icon = "Strike of the Scorpok"
+	elseif icon == "Lung Juice Cocktail" then
+		icon = "Spirit of Boar"
+	elseif icon == "Elixir of Frost Power" then
+		icon = "Frost Power"
+	elseif icon == "Elixir of Shadow Power" then
+		icon = "Shadow Power"
+	elseif icon == "Mighty Troll's Blood Potion" or icon == "Major Troll's Blood Potion" then
+		icon = "Regeneration"
+	elseif icon == "Tender Wolf Steak" then
+		icon = "Food"
+	elseif icon == "Sayge's Dark Fortune of Damage" then
+		icon = "Sayge's Dark Fortune of Damage"
+	elseif icon == "Sayge's Dark Fortune of Intelligence" then
+		icon = "Sayge's Dark Fortune of Intelligence"
+	end
+		
 	if allBuffs[icon] == nil then
 		return BS:GetSpellIcon(icon)
 	else
